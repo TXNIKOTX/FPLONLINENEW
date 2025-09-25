@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIFA PREMIER LEAGUE ONLINE</title>
+  <meta name="description" content="Online FIFA Premier League for friends." />
+  <style>
+    :root { --bg:#0b0b0c; --card:#141416; --text:#f2f3f5; --muted:#b3b9c6; --accent:#1e90ff; --border:#22242a; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); line-height:1.6}
+    a{color:var(--text); text-decoration:none}
+    .container{max-width:1000px; margin:0 auto; padding:24px}
+    header{padding:48px 24px; text-align:center}
+    h1{font-size:2rem; margin:0 0 8px}
+    .subtitle{color:var(--muted)}
+    nav{position:sticky; top:0; background:rgba(11,11,12,0.8); backdrop-filter:blur(6px); border-bottom:1px solid var(--border)}
+    nav .row{display:flex; gap:12px; align-items:center; justify-content:center; padding:12px}
+    nav a{padding:8px 12px; border:1px solid var(--border); border-radius:10px; font-size:14px}
+    nav a:hover{border-color:var(--accent)}
+    section{padding:32px 24px}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:16px; padding:20px}
+    h2{margin:0 0 12px}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px}
+    .muted{color:var(--muted)}
+    iframe{width:100%; border:0}
+    footer{padding:32px 24px; text-align:center; color:var(--muted)}
+    .tag{display:inline-block; padding:4px 8px; border:1px solid var(--border); border-radius:999px; font-size:12px; color:var(--muted)}
+    .list{margin:0; padding-left:18px}
+    .list li{margin:6px 0}
+    .kpis{display:flex; gap:16px; flex-wrap:wrap}
+    .kpis .card{flex:1 1 200px; text-align:center}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <h1>FIFA PREMIER LEAGUE ONLINE</h1>
+    <p class="subtitle">Friendly online FIFA league for friends.</p>
+    <div class="kpis">
+      <div class="card"><div class="muted">Season</div><div><strong>FIFA – Season 1</strong></div></div>
+      <div class="card"><div class="muted">Players</div><div><strong>TBD</strong></div></div>
+      <div class="card"><div class="muted">Format</div><div><strong>Season start TBD • Number of weeks TBD</strong></div></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="row container">
+      <a href="#players">Players</a>
+      <a href="#fixtures">Fixtures</a>
+      <a href="#results">Results</a>
+      <a href="#standings">Standings</a>
+      <a href="#rules">Rules</a>
+      <a href="#community">Community</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Players -->
+    <section id="players" class="grid">
+      <div class="card">
+        <h2>Participants</h2>
+        <p class="muted">Live list of all registered players is embedded from the Google Sheet below.</p>
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnD9hAOE-8Ky5cANeFU8UDFALuprvUn4CJ0eN_SgRZ8-VSYRHxLHVuCJ1qPaqdIbQ7RuI9mRB_SxC1/pubhtml?gid=276061365&single=true&widget=true&headers=false"
+          height="420"
+          title="Participants"></iframe>
+      </div>
+      <div class="card">
+        <h2>Quick Info</h2>
+        <ul class="list">
+          <li><span class="tag">FIFA</span> Platforms: PS / Xbox</li>
+          <li>Season start: <strong>TBD</strong></li>
+          <li>Number of weeks: <strong>TBD</strong></li>
+          <li>Scheduling: coordination will be on a group messaging app (to be decided)</li>
+          <li>Results: winner submits score + screenshot</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Fixtures -->
+    <section id="fixtures" class="grid">
+      <div class="card">
+        <h2>Fixtures</h2>
+        <p class="muted">Fixtures are embedded from the Google Sheet tab below.</p>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnD9hAOE-8Ky5cANeFU8UDFALuprvUn4CJ0eN_SgRZ8-VSYRHxLHVuCJ1qPaqdIbQ7RuI9mRB_SxC1/pubhtml?gid=1957821658&single=true" height="420" title="Fixtures"></iframe>
+      </div>
+      <div class="card">
+        <h2>Find a Time</h2>
+        <p>Coordinate match times in the chosen group messaging app. Aim to schedule within the weekly window.</p>
+        <ul class="list">
+          <li>Propose 3 times; accept or counter within 24h.</li>
+          <li>No response in 48h → risk of forfeit.</li>
+          <li>Reschedules allowed if both agree.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Results Feed only -->
+    <section id="results" class="grid">
+      <div class="card">
+        <h2>Results Feed (Sheet Tab)</h2>
+        <p class="muted">Results are embedded from the Google Sheet tab below.</p>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnD9hAOE-8Ky5cANeFU8UDFALuprvUn4CJ0eN_SgRZ8-VSYRHxLHVuCJ1qPaqdIbQ7RuI9mRB_SxC1/pubhtml?gid=366187514&single=true" height="420" title="Results Feed"></iframe>
+      </div>
+    </section>
+
+    <!-- Standings -->
+    <section id="standings" class="card">
+      <h2>Standings</h2>
+      <p class="muted">Standings are embedded from the Google Sheet tab below.</p>
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRnD9hAOE-8Ky5cANeFU8UDFALuprvUn4CJ0eN_SgRZ8-VSYRHxLHVuCJ1qPaqdIbQ7RuI9mRB_SxC1/pubhtml?gid=515212950&single=true" height="520" title="Standings"></iframe>
+    </section>
+
+    <!-- Rules -->
+    <section id="rules" class="grid">
+      <div class="card">
+        <h2>Rules (Short)</h2>
+        <ul class="list">
+          <li>1 match per week. If you can’t play, notify early.</li>
+          <li>Results: winner submits; opponent may contest within 24h.</li>
+          <li>Tiebreakers: Points → Head-to-Head → Goal/Point Diff → GF.</li>
+          <li>Disconnects: before 30' → replay 0–0; after 30' → attempt to resume. If no agreement, admin decides.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Code of Conduct</h2>
+        <ul class="list">
+          <li>No harassment, cheating, smurfing.</li>
+          <li>Be respectful when scheduling; show up on time.</li>
+          <li>3 strikes may result in a season ban.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Community -->
+    <section id="community" class="card">
+      <h2>Community</h2>
+      <p>Join the group messaging app (link to be shared once decided) to schedule matches, post results, and get announcements.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="y"></span> FIFA Premier League Online • MVP</div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
